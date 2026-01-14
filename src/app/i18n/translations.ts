@@ -1,0 +1,88 @@
+export const translations: any = {
+  ru: {
+    title: "История подписок YouTube",
+    description: "Узнайте точную дату, когда вы подписались на любимые каналы.",
+    placeholder: "Ссылка на канал или @username",
+    analyzeBtn: "Анализировать",
+    loading: "Загрузка...",
+    searchPlaceholder: "Поиск по названию...",
+    sortOld: "Сначала старые",
+    sortNew: "Сначала новые",
+    found: "Найдено",
+    privateTitle: "Ваши подписки скрыты",
+    privateDesc:
+      "YouTube скрывает список подписок по умолчанию. Пожалуйста, откройте их в настройках приватности вашего канала.",
+    notFound: "Канал не найден. Проверьте правильность ссылки.",
+    error: "Произошла ошибка при загрузке данных.",
+    howItWorks: "Как это работает?",
+    step1: "Откройте доступ",
+    step1Desc: "В настройках YouTube включите публичное отображение подписок.",
+    step2: "Скопируйте URL",
+    step2Desc: "Используйте ссылку на ваш канал или короткий хэндл (@name).",
+    step3: "Получите список",
+    step3Desc: "Мы покажем историю подписок от самой первой до последней.",
+    safetyTitle: "Это безопасно?",
+    safetyDesc:
+      "Мы не запрашиваем доступ к вашему аккаунту. Инструмент использует только публичные данные YouTube API.",
+    footer: "Инструменты для YouTube от viktoor.ru",
+  },
+  en: {
+    title: "YouTube Subscription History",
+    description:
+      "Find out the exact date you subscribed to your favorite channels.",
+    placeholder: "Channel URL or @username",
+    analyzeBtn: "Analyze",
+    loading: "Loading...",
+    searchPlaceholder: "Search by name...",
+    sortOld: "Oldest first",
+    sortNew: "Newest first",
+    found: "Found",
+    privateTitle: "Subscriptions are private",
+    privateDesc:
+      "YouTube hides subscription lists by default. Please make them public in your YouTube privacy settings.",
+    notFound: "Channel not found. Please check the URL.",
+    error: "An error occurred while fetching data.",
+    howItWorks: "How it works?",
+    step1: "Make public",
+    step1Desc:
+      "Enable 'Public subscriptions' in your YouTube account settings.",
+    step2: "Copy URL",
+    step2Desc: "Copy your channel URL or your handle (e.g., @username).",
+    step3: "Get results",
+    step3Desc: "We will show your subscription history from oldest to newest.",
+    safetyTitle: "Is it safe?",
+    safetyDesc:
+      "We don't ask for your login or password. We only use public data from the YouTube API.",
+    footer: "YouTube Tools by viktoor.ru",
+  },
+  es: {
+    title: "Historial de suscripciones de YouTube",
+    description:
+      "Descubre la fecha exacta en la que te suscribiste a tus canales favoritos.",
+    placeholder: "Enlace del canal o @usuario",
+    analyzeBtn: "Analizar",
+    loading: "Cargando...",
+    searchPlaceholder: "Buscar por nombre...",
+    sortOld: "Más antiguos",
+    sortNew: "Más recientes",
+    found: "Encontrado",
+    privateTitle: "Las suscripciones son privadas",
+    privateDesc:
+      "YouTube oculta las listas de suscripción por defecto. Por favor, hazlas públicas en la configuración de privacidad de tu canal.",
+    notFound: "Canal no encontrado. Verifica el enlace.",
+    error: "Ocurrió un error al cargar los datos.",
+    howItWorks: "¿Cómo funciona?",
+    step1: "Hacer público",
+    step1Desc:
+      "Activa 'Suscripciones públicas' en la configuración de tu cuenta de YouTube.",
+    step2: "Copiar URL",
+    step2Desc: "Copia la URL de tu canal o tu handle (ej. @usuario).",
+    step3: "Obtener resultados",
+    step3Desc:
+      "Mostraremos tu historial desde la primera suscripción hasta la última.",
+    safetyTitle: "¿Es seguro?",
+    safetyDesc:
+      "No pedimos tu contraseña. Solo usamos datos públicos de la API de YouTube.",
+    footer: "Herramientas de YouTube por viktoor.ru",
+  },
+};
