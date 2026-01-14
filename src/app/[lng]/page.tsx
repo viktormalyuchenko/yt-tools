@@ -14,6 +14,7 @@ import {
   CheckCircle2,
   Lock,
 } from "lucide-react";
+import SEOContent from "./components/SEOContent";
 
 // Типизация для параметров
 type Props = {
@@ -193,6 +194,7 @@ export default function Page({ params }: Props) {
             </div>
           </div>
         )}
+        {subs.length === 0 && !loading && <SEOContent t={t} />}
       </main>
 
       <footer className="py-12 text-center text-slate-400 text-sm border-t border-slate-200 mt-20">
