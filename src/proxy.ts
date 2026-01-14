@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 const languages = ["en", "ru", "es"];
 const defaultLanguage = "en";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Проверяем, есть ли язык в пути
