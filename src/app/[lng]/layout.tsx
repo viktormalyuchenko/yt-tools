@@ -24,6 +24,9 @@ export async function generateMetadata({
       google: "Ihz5Cd5vkNkVuh36pZjbyhECtbKBY5oZu7pMs4t5kXU",
       yandex: "792da3ac3acc8753",
     },
+    icons: {
+      icon: "/favicon.ico",
+    },
     alternates: {
       canonical: url,
       languages: {
