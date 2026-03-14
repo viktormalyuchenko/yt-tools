@@ -46,6 +46,9 @@ export const translations: any = {
     genericErrorTitle: "Произошла ошибка",
     genericErrorDesc:
       "Не удалось связаться с YouTube. Возможно, вы ввели неверную ссылку или сервера временно недоступны.",
+    emptyTitle: "Нет подписок",
+    emptyDesc:
+      "На этом канале нет публичных подписок, либо он ни на кого не подписан.",
     shareText:
       "Я подписан на свой первый канал с {year} года! А какая история у тебя?",
     copyLink: "Копировать ссылку",
@@ -101,6 +104,9 @@ export const translations: any = {
     genericErrorTitle: "An error occurred",
     genericErrorDesc:
       "Failed to connect to YouTube. The link might be invalid, or servers are temporarily down.",
+    emptyTitle: "No subscriptions",
+    emptyDesc:
+      "This channel has no public subscriptions, or it is not subscribed to anyone.",
     shareText:
       "I've been subscribed to my first channel since {year}! What's your history?",
     copyLink: "Copy Link",
@@ -157,6 +163,9 @@ export const translations: any = {
     genericErrorTitle: "Ocurrió un error",
     genericErrorDesc:
       "No se pudo conectar con YouTube. El enlace puede ser inválido o los servidores están inactivos.",
+    emptyTitle: "Sin suscripciones",
+    emptyDesc:
+      "Este canal no tiene suscripciones públicas, o no está suscrito a nadie.",
     shareText:
       "¡Me suscribí a mi primer canal en {year}! ¿Cuál es tu historia?",
     copyLink: "Copiar enlace",

@@ -36,6 +36,8 @@ function PageContent({ lng }: { lng: string }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
+  const [hasSearched, setHasSearched] = useState(false);
+
   const handleAnalyze = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     if (!input.trim()) return;
@@ -43,6 +45,7 @@ function PageContent({ lng }: { lng: string }) {
     setLoading(true);
     setError("");
     setSearchQuery("");
+    setHasSearched(false);
 
     // Обновляем URL
     router.push(`/${lng}?channel=${encodeURIComponent(input.trim())}`, {
@@ -61,6 +64,7 @@ function PageContent({ lng }: { lng: string }) {
         setSubs([]);
       } else {
         setSubs(data);
+        setHasSearched(true);
       }
     } catch {
       setError("error");
@@ -148,6 +152,18 @@ function PageContent({ lng }: { lng: string }) {
               <h3 className="font-bold text-red-900">{t.genericErrorTitle}</h3>
               <p className="text-red-800 text-sm mt-1">{t.genericErrorDesc}</p>
             </div>
+          </div>
+        )}
+
+        {hasSearched && subs.length === 0 && !error && (
+          <div className="mb-8 p-8 bg-slate-50 border-2 border-slate-200 rounded-3xl flex flex-col items-center justify-center text-center animate-in fade-in zoom-in-95">
+            <div className="w-16 h-16 bg-slate-200 text-slate-400 rounded-full flex items-center justify-center mb-4">
+              <History size={32} />
+            </div>
+            <h3 className="font-bold text-2xl text-slate-800 mb-2">
+              {t.emptyTitle}
+            </h3>
+            <p className="text-slate-500 max-w-md">{t.emptyDesc}</p>
           </div>
         )}
 
@@ -246,7 +262,7 @@ function PageContent({ lng }: { lng: string }) {
         )}
 
         {/* SEO CONTENT */}
-        {subs.length === 0 && !loading && !error && <SEOContent t={t} />}
+        {!hasSearched && !loading && !error && <SEOContent t={t} />}
       </main>
 
       <footer className="py-12 text-center text-slate-400 text-sm border-t border-slate-200 mt-20">
