@@ -40,6 +40,12 @@ export const translations: any = {
       "Многие пользователи годами смотрят любимых блогеров и хотят вспомнить, с чего началось их увлечение той или иной темой. Наш инструмент выстраивает все ваши каналы в хронологическом порядке — от самого первого до последнего.",
     seoTextP2:
       "Это не только интересно, но и полезно для чистки аккаунта. Вы сможете легко найти старые, заброшенные каналы, на которые подписались много лет назад, и отписаться от неактуального контента.",
+    notFoundTitle: "Канал не найден",
+    notFoundDesc:
+      "Мы не смогли найти канал по этой ссылке. Проверьте правильность URL или @хэндла (например, @wylsacom).",
+    genericErrorTitle: "Произошла ошибка",
+    genericErrorDesc:
+      "Не удалось связаться с YouTube. Возможно, вы ввели неверную ссылку или сервера временно недоступны.",
   },
   en: {
     title: "YouTube Subscription History",
@@ -84,6 +90,12 @@ export const translations: any = {
       "Many users have been watching their favorite creators for years and want to remember how their journey began. Our tool organizes all your subscriptions in chronological order, from the very first to the most recent.",
     seoTextP2:
       "It's not just for nostalgia—it's also great for account cleanup. You can easily find old, inactive channels you followed years ago and unfollow content that is no longer relevant to you.",
+    notFoundTitle: "Channel not found",
+    notFoundDesc:
+      "We couldn't find a channel with this link. Please check if the URL or @handle is correct.",
+    genericErrorTitle: "An error occurred",
+    genericErrorDesc:
+      "Failed to connect to YouTube. The link might be invalid, or servers are temporarily down.",
   },
   es: {
     title: "Historial de suscripciones de YouTube",
@@ -129,5 +141,11 @@ export const translations: any = {
       "Muchos usuarios ven a sus creadores favoritos durante años y quieren recordar cómo empezó todo. Nuestra herramienta organiza todas tus suscripciones en orden cronológico, desde la primera hasta la última.",
     seoTextP2:
       "No es solo por nostalgia, también es útil para limpiar tu cuenta. Puedes encontrar canales antiguos e inactivos que seguiste hace años y dejar de seguir contenido que ya no te interesa.",
+    notFoundTitle: "Canal no encontrado",
+    notFoundDesc:
+      "No pudimos encontrar un canal con este enlace. Verifica que la URL o el @usuario sea correcto.",
+    genericErrorTitle: "Ocurrió un error",
+    genericErrorDesc:
+      "No se pudo conectar con YouTube. El enlace puede ser inválido o los servidores están inactivos.",
   },
 };

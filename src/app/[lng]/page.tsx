@@ -13,6 +13,8 @@ import {
   History,
   CheckCircle2,
   Lock,
+  SearchX,
+  AlertTriangle,
 } from "lucide-react";
 import SEOContent from "./components/SEOContent";
 
@@ -55,7 +57,7 @@ export default function Page({ params }: Props) {
 
   const processedSubs = useMemo(() => {
     let result = [...subs].filter((sub) =>
-      sub.snippet.title.toLowerCase().includes(searchQuery.toLowerCase())
+      sub.snippet.title.toLowerCase().includes(searchQuery.toLowerCase()),
     );
     return result.sort((a, b) => {
       const dateA = new Date(a.snippet.publishedAt).getTime();
@@ -102,6 +104,25 @@ export default function Page({ params }: Props) {
             <div>
               <h3 className="font-bold text-amber-900">{t.privateTitle}</h3>
               <p className="text-amber-800 text-sm mt-1">{t.privateDesc}</p>
+            </div>
+          </div>
+        )}
+        {error === "not_found" && (
+          <div className="mb-8 p-6 bg-slate-100 border-2 border-slate-200 rounded-2xl flex gap-4 animate-in fade-in slide-in-from-top-4">
+            <SearchX className="text-slate-500 shrink-0" size={28} />
+            <div>
+              <h3 className="font-bold text-slate-800">{t.notFoundTitle}</h3>
+              <p className="text-slate-600 text-sm mt-1">{t.notFoundDesc}</p>
+            </div>
+          </div>
+        )}
+
+        {error === "error" && (
+          <div className="mb-8 p-6 bg-red-50 border-2 border-red-200 rounded-2xl flex gap-4 animate-in fade-in slide-in-from-top-4">
+            <AlertTriangle className="text-red-600 shrink-0" size={28} />
+            <div>
+              <h3 className="font-bold text-red-900">{t.genericErrorTitle}</h3>
+              <p className="text-red-800 text-sm mt-1">{t.genericErrorDesc}</p>
             </div>
           </div>
         )}
@@ -152,7 +173,7 @@ export default function Page({ params }: Props) {
                 <p className="text-[11px] text-slate-400 flex items-center gap-1 mt-1">
                   <Calendar size={12} />
                   {new Date(sub.snippet.publishedAt).toLocaleDateString(
-                    lng === "ru" ? "ru-RU" : "en-US"
+                    lng === "ru" ? "ru-RU" : "en-US",
                   )}
                 </p>
               </div>
