@@ -6,9 +6,10 @@ export async function getChannelIdFromInput(input: string) {
     throw new Error("API_KEY_MISSING");
   }
 
-  const identifier = input.trim();
+  const cleanUrl = input.split("?")[0];
+  const identifier = cleanUrl.trim();
   const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(
-    identifier
+    identifier,
   )}&type=channel&key=${API_KEY}&maxResults=1`;
 
   const res = await fetch(searchUrl);

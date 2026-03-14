@@ -46,6 +46,11 @@ export const translations: any = {
     genericErrorTitle: "Произошла ошибка",
     genericErrorDesc:
       "Не удалось связаться с YouTube. Возможно, вы ввели неверную ссылку или сервера временно недоступны.",
+    shareText:
+      "Я подписан на свой первый канал с {year} года! А какая история у тебя?",
+    copyLink: "Копировать ссылку",
+    copied: "Скопировано!",
+    exportCsv: "Скачать CSV",
   },
   en: {
     title: "YouTube Subscription History",
@@ -96,6 +101,11 @@ export const translations: any = {
     genericErrorTitle: "An error occurred",
     genericErrorDesc:
       "Failed to connect to YouTube. The link might be invalid, or servers are temporarily down.",
+    shareText:
+      "I've been subscribed to my first channel since {year}! What's your history?",
+    copyLink: "Copy Link",
+    copied: "Copied!",
+    exportCsv: "Export CSV",
   },
   es: {
     title: "Historial de suscripciones de YouTube",
@@ -147,5 +157,10 @@ export const translations: any = {
     genericErrorTitle: "Ocurrió un error",
     genericErrorDesc:
       "No se pudo conectar con YouTube. El enlace puede ser inválido o los servidores están inactivos.",
+    shareText:
+      "¡Me suscribí a mi primer canal en {year}! ¿Cuál es tu historia?",
+    copyLink: "Copiar enlace",
+    copied: "¡Copiado!",
+    exportCsv: "Exportar CSV",
   },
 };
