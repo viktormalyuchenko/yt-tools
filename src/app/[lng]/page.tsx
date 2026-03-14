@@ -16,6 +16,7 @@ import {
   Lock,
   SearchX,
   AlertTriangle,
+  X,
 } from "lucide-react";
 import SEOContent from "./components/SEOContent";
 import Dashboard from "./components/Dashboard";
@@ -74,6 +75,17 @@ function PageContent({ lng }: { lng: string }) {
     }
   };
 
+  const handleReset = () => {
+    setInput(""); // Очищаем поле ввода
+    setSubs([]); // Удаляем результаты
+    setError(""); // Убираем ошибки
+    setHasSearched(false); // Возвращаем состояние "до поиска"
+    setSearchQuery(""); // Очищаем фильтр
+
+    // Очищаем URL (убираем ?channel=...)
+    router.push(`/${lng}`, { scroll: false });
+  };
+
   // Автоматический запуск поиска, если в URL есть параметр (например, перешли по ссылке)
   useEffect(() => {
     if (initialChannel) {
@@ -96,7 +108,10 @@ function PageContent({ lng }: { lng: string }) {
     <div className="min-h-screen bg-[#f9fafb] text-slate-900 font-sans">
       <header className="bg-white border-b border-slate-200 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-red-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-red-200">
+          <div
+            onClick={handleReset}
+            className="cursor-pointer  bg-red-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-red-200"
+          >
             <History className="text-white" size={32} />
           </div>
           <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
@@ -104,18 +119,23 @@ function PageContent({ lng }: { lng: string }) {
           </h1>
           <p className="text-lg text-slate-500 mb-10">{t.description}</p>
 
-          <form onSubmit={handleAnalyze} className="max-w-xl mx-auto relative">
+          <form
+            onSubmit={handleAnalyze}
+            className="max-w-xl mx-auto relative flex items-center"
+          >
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={t.placeholder}
-              className="w-full pl-6 pr-36 py-5 bg-white border-2 border-slate-200 rounded-2xl shadow-sm outline-none focus:border-red-500 transition-all text-lg"
+              // pr-40 (160px) достаточно, чтобы текст не залезал под кнопку "Анализировать"
+              className="w-full pl-6 pr-40 py-5 bg-white border-2 border-slate-200 rounded-2xl shadow-sm outline-none focus:border-red-500 transition-all text-lg"
               required
             />
+
             <button
               disabled={loading}
-              className="absolute right-2 top-2 bottom-2 bg-red-600 text-white px-6 rounded-xl font-bold hover:bg-red-700 disabled:bg-slate-300 transition-all"
+              className="absolute right-2 top-2 bottom-2 bg-red-600 text-white px-6 rounded-xl font-bold hover:bg-red-700 disabled:bg-slate-300 transition-all z-20"
             >
               {loading ? t.loading : t.analyzeBtn}
             </button>
@@ -198,6 +218,7 @@ function PageContent({ lng }: { lng: string }) {
           <Dashboard
             subs={processedSubs.length === subs.length ? subs : processedSubs}
             t={t}
+            onReset={handleReset}
           />
         )}
 

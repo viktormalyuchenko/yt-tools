@@ -8,9 +8,18 @@ import {
   Share2,
   Send,
   Download,
+  History,
 } from "lucide-react";
 
-export default function Dashboard({ subs, t }: { subs: any[]; t: any }) {
+export default function Dashboard({
+  subs,
+  t,
+  onReset,
+}: {
+  subs: any[];
+  t: any;
+  onReset: () => void;
+}) {
   const [copied, setCopied] = useState(false);
 
   if (subs.length === 0) return null;
@@ -139,6 +148,13 @@ export default function Dashboard({ subs, t }: { subs: any[]; t: any }) {
 
       {/* ПАНЕЛЬ ДЕЙСТВИЙ (ШАРИНГ И ЭКСПОРТ) */}
       <div className="flex flex-wrap gap-3">
+        <button
+          onClick={onReset}
+          className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-slate-100 text-slate-600 px-5 py-3 rounded-xl font-bold hover:bg-slate-200 transition-colors"
+        >
+          <History size={18} />
+          {t.newSearch}
+        </button>
         <button
           onClick={handleCopy}
           className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-700 px-5 py-3 rounded-xl font-bold hover:bg-slate-50 transition-colors shadow-sm"

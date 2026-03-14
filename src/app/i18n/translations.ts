@@ -54,6 +54,7 @@ export const translations: any = {
     copyLink: "Копировать ссылку",
     copied: "Скопировано!",
     exportCsv: "Скачать CSV",
+    newSearch: "Новый поиск",
   },
   en: {
     title: "YouTube Subscription History",
@@ -112,6 +113,7 @@ export const translations: any = {
     copyLink: "Copy Link",
     copied: "Copied!",
     exportCsv: "Export CSV",
+    newSearch: "New search",
   },
   es: {
     title: "Historial de suscripciones de YouTube",
@@ -171,5 +173,6 @@ export const translations: any = {
     copyLink: "Copiar enlace",
     copied: "¡Copiado!",
     exportCsv: "Exportar CSV",
+    newSearch: "Nueva búsqueda",
   },
 };
