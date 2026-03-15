@@ -146,11 +146,79 @@ function PageContent({ lng }: { lng: string }) {
       <main className="max-w-6xl mx-auto px-4 py-12">
         {/* ОШИБКИ */}
         {error === "private" && (
-          <div className="mb-8 p-6 bg-amber-50 border-2 border-amber-200 rounded-2xl flex gap-4">
-            <Lock className="text-amber-600 shrink-0" size={28} />
-            <div>
-              <h3 className="font-bold text-amber-900">{t.privateTitle}</h3>
-              <p className="text-amber-800 text-sm mt-1">{t.privateDesc}</p>
+          <div className="mb-8 overflow-hidden bg-amber-50 border-2 border-amber-200 rounded-3xl animate-in fade-in slide-in-from-top-4 shadow-sm">
+            <div className="p-6 md:p-8 flex gap-5 border-b border-amber-200/50">
+              <Lock className="text-amber-500 shrink-0 mt-1" size={32} />
+              <div>
+                <h3 className="font-black text-amber-900 text-xl md:text-2xl mb-2">
+                  {t.privateTitle}
+                </h3>
+                <p className="text-amber-800 text-base md:text-lg">
+                  {t.privateDesc}
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8">
+              <h4 className="font-bold text-slate-800 mb-6 text-lg">
+                {t.howToOpenTitle}
+              </h4>
+              <ul className="space-y-4">
+                <li className="flex gap-4 items-start">
+                  <div className="w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 font-bold">
+                    1
+                  </div>
+                  <p className="text-slate-600 leading-relaxed pt-1">
+                    {t.howToOpenStep1}
+                    <a
+                      href="https://www.youtube.com/account_privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-red-600 font-bold hover:underline underline-offset-4"
+                    >
+                      {t.howToOpenLink}
+                    </a>
+                    <ExternalLink
+                      size={14}
+                      className="inline ml-1 text-red-500 mb-1"
+                    />
+                  </p>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <div className="w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 font-bold">
+                    2
+                  </div>
+                  <p className="text-slate-600 leading-relaxed pt-1">
+                    {t.howToOpenStep2}
+                  </p>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <div className="w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 font-bold">
+                    3
+                  </div>
+                  <p className="text-slate-600 leading-relaxed pt-1">
+                    {t.howToOpenStep3}
+                  </p>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <div className="w-8 h-8 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 font-bold">
+                    <CheckCircle2 size={18} />
+                  </div>
+                  <p className="text-slate-800 font-medium pt-1">
+                    {t.howToOpenStep4}
+                  </p>
+                </li>
+              </ul>
+
+              <div className="mt-8 flex justify-center">
+                <button
+                  onClick={() => handleAnalyze()}
+                  className="bg-red-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-red-700 transition-all shadow-md active:scale-95 flex items-center gap-2"
+                >
+                  <Search size={18} />
+                  {t.analyzeBtn}
+                </button>
+              </div>
             </div>
           </div>
         )}

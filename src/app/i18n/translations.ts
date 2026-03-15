@@ -9,9 +9,6 @@ export const translations: any = {
     sortOld: "Сначала старые",
     sortNew: "Сначала новые",
     found: "Найдено",
-    privateTitle: "Ваши подписки скрыты",
-    privateDesc:
-      "YouTube скрывает список подписок по умолчанию. Пожалуйста, откройте их в настройках приватности вашего канала.",
     notFound: "Канал не найден. Проверьте правильность ссылки.",
     error: "Произошла ошибка при загрузке данных.",
     howItWorks: "Как это работает?",
@@ -58,6 +55,16 @@ export const translations: any = {
     copied: "Скопировано!",
     exportCsv: "Скачать CSV",
     newSearch: "Новый поиск",
+    privateTitle: "Ваши подписки скрыты",
+    privateDesc:
+      "YouTube скрывает список подписок по умолчанию. Чтобы сервис заработал, вам нужно сделать их публичными.",
+    howToOpenTitle: "Как открыть подписки (Займет 10 секунд):",
+    howToOpenStep1: "Перейдите в ",
+    howToOpenLink: "Настройки конфиденциальности YouTube",
+    howToOpenStep2:
+      "Найдите переключатель «Не показывать информацию о моих подписках» (Keep all my subscriptions private).",
+    howToOpenStep3: "Выключите его (он должен стать серым).",
+    howToOpenStep4: "Вернитесь на эту страницу и нажмите кнопку «Найти» снова.",
   },
   en: {
     title: "YouTube Subscription History",
@@ -70,9 +77,6 @@ export const translations: any = {
     sortOld: "Oldest first",
     sortNew: "Newest first",
     found: "Found",
-    privateTitle: "Subscriptions are private",
-    privateDesc:
-      "YouTube hides subscription lists by default. Please make them public in your YouTube privacy settings.",
     notFound: "Channel not found. Please check the URL.",
     error: "An error occurred while fetching data.",
     howItWorks: "How it works?",
@@ -120,6 +124,16 @@ export const translations: any = {
     copied: "Copied!",
     exportCsv: "Export CSV",
     newSearch: "New search",
+    privateTitle: "Your subscriptions are private",
+    privateDesc:
+      "YouTube hides your subscription list by default. To use this tool, you need to make them public.",
+    howToOpenTitle: "How to make them public (Takes 10 seconds):",
+    howToOpenStep1: "Go to your ",
+    howToOpenLink: "YouTube Privacy Settings",
+    howToOpenStep2:
+      "Find the toggle that says 'Keep all my subscriptions private'.",
+    howToOpenStep3: "Turn it OFF (it should turn gray).",
+    howToOpenStep4: "Come back to this page and click 'Analyze' again.",
   },
   es: {
     title: "Historial de suscripciones de YouTube",
@@ -132,9 +146,6 @@ export const translations: any = {
     sortOld: "Más antiguos",
     sortNew: "Más recientes",
     found: "Encontrado",
-    privateTitle: "Las suscripciones son privadas",
-    privateDesc:
-      "YouTube oculta las listas de suscripción por defecto. Por favor, hazlas públicas en la configuración de privacidad de tu canal.",
     notFound: "Canal no encontrado. Verifica el enlace.",
     error: "Ocurrió un error al cargar los datos.",
     howItWorks: "¿Cómo funciona?",
@@ -183,5 +194,15 @@ export const translations: any = {
     copied: "¡Copiado!",
     exportCsv: "Exportar CSV",
     newSearch: "Nueva búsqueda",
+    privateTitle: "Tus suscripciones son privadas",
+    privateDesc:
+      "YouTube oculta tu lista de suscripciones por defecto. Para usar esta herramienta, debes hacerlas públicas.",
+    howToOpenTitle: "Cómo hacerlas públicas (Toma 10 segundos):",
+    howToOpenStep1: "Ve a tu ",
+    howToOpenLink: "Configuración de privacidad de YouTube",
+    howToOpenStep2:
+      "Encuentra el interruptor que dice 'Mantener todas mis suscripciones como privadas'.",
+    howToOpenStep3: "Desactívalo (debería ponerse gris).",
+    howToOpenStep4: "Vuelve a esta página y haz clic en 'Analizar' de nuevo.",
   },
 };
