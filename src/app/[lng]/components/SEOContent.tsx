@@ -28,6 +28,12 @@ export default function SEOContent({ t }: { t: any }) {
           </h3>
           <p className="text-slate-600 leading-relaxed">{t.faq3A}</p>
         </div>
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <h3 className="font-bold text-lg mb-2 text-slate-800 tracking-tight">
+            {t.faq4Q}
+          </h3>
+          <p className="text-slate-600 leading-relaxed">{t.faq4A}</p>
+        </div>
       </div>
 
       {/* SEO Article Section */}

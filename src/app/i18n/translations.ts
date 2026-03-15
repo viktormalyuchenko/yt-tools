@@ -35,6 +35,9 @@ export const translations: any = {
     faq3Q: "Где найти ссылку на мой канал?",
     faq3A:
       "На компьютере — скопируйте URL из адресной строки браузера. В приложении — нажмите на свой аватар -> Мой канал -> Три точки -> Поделиться -> Копировать ссылку.",
+    faq4Q: "Как узнать свою самую первую подписку на Ютубе?",
+    faq4A:
+      "Наш сайт автоматически находит ваш самый первый канал. Просто вставьте ссылку, и в статистике сверху вы увидите блок «Первая подписка» с названием канала и годом, с которого вы его смотрите.",
     seoTextTitle: "Зачем нужна история подписок?",
     seoTextP1:
       "Многие пользователи годами смотрят любимых блогеров и хотят вспомнить, с чего началось их увлечение той или иной темой. Наш инструмент выстраивает все ваши каналы в хронологическом порядке — от самого первого до последнего.",
@@ -94,6 +97,9 @@ export const translations: any = {
     faq3Q: "Where can I find my Channel URL?",
     faq3A:
       "On a desktop, copy the URL from your browser's address bar. In the mobile app, tap your profile picture -> Your Channel -> Three dots -> Share -> Copy Link.",
+    faq4Q: "How to find out my very first YouTube subscription?",
+    faq4A:
+      "Our site automatically finds your very first channel. Just paste the link, and in the stats at the top, you'll see a block called 'First subscription' with the channel name and the year you've been watching it since.",
     seoTextTitle: "Why check your subscription history?",
     seoTextP1:
       "Many users have been watching their favorite creators for years and want to remember how their journey began. Our tool organizes all your subscriptions in chronological order, from the very first to the most recent.",
@@ -154,6 +160,9 @@ export const translations: any = {
     faq3Q: "¿Dónde encuentro el enlace de mi canal?",
     faq3A:
       "En una computadora, copia la URL de la barra de direcciones. En la aplicación móvil, toca tu foto de perfil -> Tu canal -> Tres puntos -> Compartir -> Copiar enlace.",
+    faq4Q: "¿Cómo saber cuál fue mi primera suscripción en YouTube?",
+    faq4A:
+      "Nuestro sitio encuentra automáticamente tu primer canal. Solo pega el enlace, y en las estadísticas de arriba verás un bloque llamado 'Primera suscripción' con el nombre del canal y el año desde que lo sigues.",
     seoTextTitle: "¿Por qué revisar tu historial de suscripciones?",
     seoTextP1:
       "Muchos usuarios ven a sus creadores favoritos durante años y quieren recordar cómo empezó todo. Nuestra herramienta organiza todas tus suscripciones en orden cronológico, desde la primera hasta la última.",
