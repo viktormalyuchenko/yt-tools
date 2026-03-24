@@ -121,21 +121,19 @@ function PageContent({ lng }: { lng: string }) {
 
           <form
             onSubmit={handleAnalyze}
-            className="max-w-xl mx-auto relative flex items-center"
+            className="max-w-2xl mx-auto flex flex-col sm:flex-row gap-3"
           >
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={t.placeholder}
-              // pr-40 (160px) достаточно, чтобы текст не залезал под кнопку "Анализировать"
-              className="w-full pl-6 pr-40 py-5 bg-white border-2 border-slate-200 rounded-2xl shadow-sm outline-none focus:border-red-500 transition-all text-lg"
+              className="flex-1 w-full px-6 py-4 md:py-5 bg-white border-2 border-slate-200 rounded-2xl shadow-sm outline-none focus:border-red-500 transition-all text-lg"
               required
             />
-
             <button
               disabled={loading}
-              className="absolute right-2 top-2 bottom-2 bg-red-600 text-white px-6 rounded-xl font-bold hover:bg-red-700 disabled:bg-slate-300 transition-all z-20"
+              className="w-full sm:w-auto bg-red-600 text-white px-8 py-4 md:py-5 rounded-2xl font-bold hover:bg-red-700 disabled:bg-slate-300 transition-all shadow-md active:scale-95 whitespace-nowrap"
             >
               {loading ? t.loading : t.analyzeBtn}
             </button>
